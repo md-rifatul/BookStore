@@ -6,7 +6,7 @@ namespace BookStore.Services.IServices
     {
         IEnumerable<Book> GetAllBooks();
         Book GetBook(int? id);
-         void AddBook(Book book);
+        void AddBook(Book book);
         void UpdateBook(Book book);
         void DeleteBook(Book book);
     }

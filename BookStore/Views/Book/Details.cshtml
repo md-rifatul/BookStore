@@ -1,0 +1,14 @@
+﻿@model BookStore.Models.Book
+
+<h2 style="font-family: Arial, sans-serif; color: #333;">Book Details</h2>
+
+<div style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+    <p><strong>Title:</strong> @Model.Title</p>
+    <p><strong>Author:</strong> @Model.Author</p>
+    <p><strong>Price:</strong> @Model.Price</p>
+</div>
+
+<p>
+    <a asp-action="Edit" asp-route-bookId="@Model.Id" style="text-decoration: none; color: #28a745; margin-right: 10px;">Edit</a>
+    <a asp-action="Index" style="text-decoration: none; color: #007bff;">Back to List</a>
+</p>

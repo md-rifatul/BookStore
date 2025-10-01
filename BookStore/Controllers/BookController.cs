@@ -47,8 +47,9 @@ namespace BookStore.Controllers
              var book = _bookService.GetBook(bookId);
             return View(book);
         }
-        [HttpPost]
-        public IActionResult Delete(Book book)
+
+        [HttpPost,ActionName("Delete")]
+        public IActionResult DeleteConfirmed(Book book)
         {
             _bookService.DeleteBook(book);
             return RedirectToAction("Index");

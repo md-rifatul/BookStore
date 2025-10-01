@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BookStore.Models.Book>
+
+<h2 style="font-family: Arial, sans-serif; color: #333;">Books List</h2>
+
+<p>
+    <a asp-action="Create" style="text-decoration: none; color: white; background-color: #007bff; padding: 5px 10px; border-radius: 4px;">Add New Book</a>
+</p>
+
+<table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <thead>
+        <tr style="background-color: #f2f2f2;">
+            <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Title</th>
+            <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Author</th>
+            <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Price</th>
+            <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #ddd;">@item.Title</td>
+                <td style="padding: 8px; border-bottom: 1px solid #ddd;">@item.Author</td>
+                <td style="padding: 8px; border-bottom: 1px solid #ddd;">@item.Price</td>
+                <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+                    <a asp-action="Details" asp-route-bookId="@item.Id" style="margin-right:5px; text-decoration:none; color:#007bff;">Details</a>
+                    <a asp-action="Edit" asp-route-bookId="@item.Id" style="margin-right:5px; text-decoration:none; color:#28a745;">Edit</a>
+                    <a asp-action="Delete" asp-route-bookId="@item.Id" style="text-decoration:none; color:#dc3545;">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

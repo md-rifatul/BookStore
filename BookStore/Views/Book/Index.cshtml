@@ -10,8 +10,6 @@
     <thead>
         <tr style="background-color: #f2f2f2;">
             <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Title</th>
-            <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Author</th>
-            <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Price</th>
             <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Actions</th>
         </tr>
     </thead>
@@ -20,8 +18,6 @@
         {
             <tr>
                 <td style="padding: 8px; border-bottom: 1px solid #ddd;">@item.Title</td>
-                <td style="padding: 8px; border-bottom: 1px solid #ddd;">@item.Author</td>
-                <td style="padding: 8px; border-bottom: 1px solid #ddd;">@item.Price</td>
                 <td style="padding: 8px; border-bottom: 1px solid #ddd;">
                     <a asp-action="Details" asp-route-bookId="@item.Id" style="margin-right:5px; text-decoration:none; color:#007bff;">Details</a>
                     <a asp-action="Edit" asp-route-bookId="@item.Id" style="margin-right:5px; text-decoration:none; color:#28a745;">Edit</a>

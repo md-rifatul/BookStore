@@ -24,3 +24,32 @@ This project demonstrates **Clean Architecture principles** using **Repository &
 ---
 
 ## 📂 Project Structure
+
+```text
+BookStore/
+ ┣ 📂 Controllers
+ ┃ ┣ 📜 BookController.cs
+ ┃ ┗ 📜 HomeController.cs
+ ┣ 📂 Models
+ ┃ ┣ 📜 Book.cs
+ ┃ ┗ 📜 ErrorViewModel.cs
+ ┣ 📂 Repositories
+ ┃ ┣ 📂 IRepositories
+ ┃ ┃ ┗ 📜 IBookRepository.cs
+ ┃ ┗ 📜 BookRepository.cs
+ ┣ 📂 Services
+ ┃ ┣ 📂 IServices
+ ┃ ┃ ┗ 📜 IBookService.cs
+ ┃ ┗ 📜 BookService.cs
+ ┣ 📂 Views
+ ┃ ┣ 📂 Book
+ ┃ ┃ ┣ 📜 Create.cshtml
+ ┃ ┃ ┣ 📜 Edit.cshtml
+ ┃ ┃ ┣ 📜 Delete.cshtml
+ ┃ ┃ ┣ 📜 Details.cshtml
+ ┃ ┃ ┗ 📜 Index.cshtml
+ ┃ ┣ 📂 Home
+ ┃ ┗ 📂 Shared
+ ┣ 📂 Data
+ ┣ 📂 Migrations
+ ┣ 📜 Program.cs / Startup.cs
